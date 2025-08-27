@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ * {
+  box-sizing: border-box; /* evita estourar largura */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* remove rolagem horizontal */
+}
+
+.header {
+  width: 100%;
+  height: 10vh;
+  background-color: #000346;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header img {
+  height: 70%;   /* logo sempre proporcional ao header */
+  max-height: 60px; /* nunca passa disso */
+  object-fit: contain;
+}
+
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 30px; /* menos espaço para caber bem */
+  flex-wrap: wrap; /* quebra em telas pequenas */
+}
+
+.menu li a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.botao1, .botao2 {
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;
+  height: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.botao1 {
+  background-color: #00ff93;
+  border: none;
+  color: #000346;
+}
+
+.botao2 {
+  background-color: #000346;
+  border: 1px solid #00ff93;
+  color: #00ff93;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.rodape {
+  background-color: #000346;
+  color: white;
+  height: 20vh;
+  width: 100%;
+  font-size: 14px;
+  font-family: helvetica;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rodape a {
+  text-decoration: none;
+  color: white;
+}
+
+.rodape-div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.rodape-div-1,
+.rodape-div-2,
+.rodape-div-3,
+.rodape-div-4 {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.rodape span {
+  font-size: 20px;
+  color: white;
+}
+
+.rodape-direitos {
+  text-align: center;
+  background-color: black;
+  padding: 10px;
+  font-size: 0.8em;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="pagina_inicial.html"><img src="img/images.png"  alt="Logo" /></a>
+    <nav>
+      <ul class="menu">
+        <li><a href="#Sobre">Sobre</a></li>
+        <li><a href="#Serviços">Serviços</a></li>
+        <li><a href="#Contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div>
+      <a href="login.php"><button class="botao1">Login</button></a>
+      <a href="cadastro.php"><button class="botao2">Cadastro</button></a>
+    </div>
+  </header>
+
+  <main class="content">
+    <h1>Conteúdo da página</h1>
+    <p>O corpo do site vai aqui...</p>
+  </main>
+
+  <footer class="rodape" id="contato">
+    <div class="rodape-div">
+      <div class="rodape-div-1">
+        <span><b>Green Garden</b></span>
+        <p>Duque de Caxias - Rio de Janeiro</p>
+      </div>
+      <div class="rodape-div-2">
+        <span><b>Contatos</b></span>
+        <p>reservas@gghotel.com.br</p>
+        <p>+55 21 99999-9999</p><a name="Contato"></a>
+      </div>
+      <div class="rodape-div-3">
+        <span><b>Links</b></span>
+        <p><a href="#Serviços">Serviços</a></p>
+        <p><a href="pagina_inicial.html">Empresa</a></p>
+        <p><a href="#Sobre">Sobre</a></p>
+      </div>
+      <div class="rodape-div-4">
+        <span><b>Outros</b></span>
+        <a href="Politicas de privacidade.html"><p>Políticas de Privacidade</p></a>
+      </div>
+    </div>
+    <p class="rodape-direitos">Copyright © 2025 – Todos os Direitos Reservados.</p>
+  </footer>
+</body>
+</html>
